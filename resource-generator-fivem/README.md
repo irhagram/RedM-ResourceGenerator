@@ -2,24 +2,9 @@
 
 This extension help you creating a new basic lua resource for FiveM
 
-# Author & Contact
- **I'm Bentozox.**
-  * Contact
-     * Discord : BENTOZOX#6743
-     * GitHub : https://github.com/Bentozox
-     * Twitter : https://twitter.com/Bentozox
-
-
-## Features
-
- Here is an explanation of how to use this extension. Please do not forget to adding star on my GitHub project (= https://github.com/Bentozox/Resource-generator-FiveM-VS-code)
-
-  <img src="https://github.com/Bentozox/Resource-generator-FiveM-VS-code/blob/master/resource-generator-fivem/preview/video-preview.gif?raw=true" width="800" >
-
-
     
 # Installation
-    Avalaible on VS code market place : https://marketplace.visualstudio.com/items?itemName=ResourceGeneratorFiveM.resource-generator-fivem
+    Avalaible on VS code market place : https://marketplace.visualstudio.com/items?itemName=sleepyrae.fivem-resource-generator
 
 # How to use it ?
     Using right click on Folder : 
@@ -35,6 +20,5 @@ This extension help you creating a new basic lua resource for FiveM
 
 
 -----------------------------------------------------------------------------------------------------------
-
 
 **Enjoy!**

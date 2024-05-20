@@ -1,7 +1,7 @@
 {
-	"publisher": "ResourceGeneratorFiveM",
-	"name": "resource-generator-fivem",
-	"displayName": "Resource Generator FiveM",
+	"publisher": "sleepyrae",
+	"name": "fivem-resource-generator",
+	"displayName": "Fivem Resource Generator",
 	"description": "This extension help you creating a new basic lua resource for FiveM",
 	"version": "0.0.4",
 	"engines": {
@@ -11,27 +11,27 @@
 		"Other"
 	],
 	"author": {
-		"name": "Bentozox"
+		"name": "Sleepy Rae"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Bentozox/Resource-generator-FiveM-VS-code"
+		"url": "https://github.com/sleepyexe/Resource-generator-FiveM-VS-code"
 	},
 	"icon": "preview/fivem.png",
-	"homepage": "https://github.com/Bentozox/Resource-generator-FiveM-VS-code",
+	"homepage": "https://github.com/sleepyexe/Resource-generator-FiveM-VS-code",
 	"license": "GPLv3",
 	"keywords": [
 		"fivem",
 		"lua",
 		"resource",
 		"script",
-		"Bentozox",
+		"Sleepy Rae",
 		"gta",
 		"generator",
 		"générateur"
 	],
 	"activationEvents": [
-		"onCommand:resource-generator-fivem.generate-resource"
+		"onCommand:fivem-resource-generator.generate-resource"
 	],
 	"main": "./extension.js",
 	"files": [
@@ -41,14 +41,14 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "resource-generator-fivem.generate-resource",
+				"command": "fivem-resource-generator.generate-resource",
 				"title": "Generate FiveM resource"
 			}
 		],
     "menus": {
 				"explorer/context": [{
 						"when": "explorerResourceIsFolder",
-						"command": "resource-generator-fivem.generate-resource"
+						"command": "fivem-resource-generator.generate-resource"
 			}]
 		}
 	},
