@@ -54,10 +54,25 @@ var InputData = {
 	version : {
 		title : "Resource version",
 		placeholder : "1.0.0, ...",
+		nextInput : "useLua54",
+		value : "",
+		input : null
+	},
+	useLua54 : {
+		title : "Use Lua 5.4?",
+		placeholder : "yes or no",
+		nextInput : "useOxLib",
+		value : "",
+		input : null
+	},
+	useOxLib : {
+		title : "Use ox_lib?",
+		placeholder : "yes or no",
 		nextInput : "",
 		value : "",
 		input : null
-	}
+	},
+
 }
 
 var startInput = "resourceName"
@@ -136,6 +151,16 @@ function getGeneratedFolder(url) {
 			
 			for (const key in InputData) {
 				folder.files[file.name] = folder.files[file.name].replace("${" + key + "}", InputData[key].value)
+			}
+			if (InputData.useOxLib.value.toLowerCase() === "yes") {
+				if (file.name === 'fxmanifest.lua') {
+					folder.files[file.name] = folder.files[file.name].replace("shared_scripts {", "shared_scripts {\n\t'@ox_lib/init.lua',")
+				}
+			}
+			if (InputData.useLua54.value.toLowerCase() === "yes") {
+				if (file.name === 'fxmanifest.lua') {
+					folder.files[file.name] = folder.files[file.name].replace("fx_version 'cerulean'", "fx_version 'cerulean'\nlua54 'yes'")
+				}
 			}
 		}
 	}
