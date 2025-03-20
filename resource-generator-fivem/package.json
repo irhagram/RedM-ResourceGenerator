@@ -1,8 +1,8 @@
 {
-	"publisher": "sleepyrae",
-	"name": "fivem-resource-generator",
-	"displayName": "Fivem Resource Generator",
-	"description": "This extension help you creating a new basic lua resource for FiveM",
+	"publisher": "TheIrham",
+	"name": "redm-resource-generator",
+	"displayName": "RedM Resource Generator",
+	"description": "This extension help you creating a new basic lua resource for RedM",
 	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.59.0"
@@ -11,27 +11,30 @@
 		"Other"
 	],
 	"author": {
-		"name": "Sleepy Rae"
+		"name": "TheIrham"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sleepyexe/Resource-generator-FiveM-VS-code"
+		"url": "https://github.com/irhagram/RedM-ResourceGenerator"
 	},
-	"icon": "preview/fivem.png",
-	"homepage": "https://github.com/sleepyexe/Resource-generator-FiveM-VS-code",
+	"icon": "preview/redm.png",
+	"homepage": "https://github.com/irhagram/RedM-ResourceGenerator",
 	"license": "GPLv3",
 	"keywords": [
 		"fivem",
+		"redm",
 		"lua",
 		"resource",
 		"script",
-		"Sleepy Rae",
+		"TheIrham",
+		"rdr",
+		"irham",
 		"gta",
 		"generator",
 		"générateur"
 	],
 	"activationEvents": [
-		"onCommand:fivem-resource-generator.generate-resource"
+		"onCommand:redm-resource-generator.generate-resource"
 	],
 	"main": "./extension.js",
 	"files": [
@@ -41,14 +44,14 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "fivem-resource-generator.generate-resource",
-				"title": "Generate FiveM resource"
+				"command": "redm-resource-generator.generate-resource",
+				"title": "Generate RedM resource"
 			}
 		],
     "menus": {
 				"explorer/context": [{
 						"when": "explorerResourceIsFolder",
-						"command": "fivem-resource-generator.generate-resource"
+						"command": "redm-resource-generator.generate-resource"
 			}]
 		}
 	},
