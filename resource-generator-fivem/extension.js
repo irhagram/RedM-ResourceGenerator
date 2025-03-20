@@ -16,7 +16,7 @@ function activate(context) {
 
 	loadInputs();
 	
-	let disposable = vscode.commands.registerCommand('fivem-resource-generator.generate-resource', function (uri) {
+	let disposable = vscode.commands.registerCommand('redm-resource-generator.generate-resource', function (uri) {
 		loadInputs(uri.fsPath)
 	});
 	extensionPath = context.extensionPath + "/template"
