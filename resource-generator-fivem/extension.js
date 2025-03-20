@@ -55,24 +55,30 @@ var InputData = {
 		title : "Resource version",
 		placeholder : "1.0.0, ...",
 		nextInput : "useLua54",
-		value : "",
+		value : "1.0.0",
 		input : null
 	},
 	useLua54 : {
 		title : "Use Lua 5.4?",
 		placeholder : "yes or no",
 		nextInput : "useOxLib",
-		value : "",
+		value : "yes",
 		input : null
 	},
 	useOxLib : {
 		title : "Use ox_lib?",
 		placeholder : "yes or no",
-		nextInput : "",
-		value : "",
+		nextInput : "useOxMySQLLib",
+		value : "yes",
 		input : null
 	},
-
+	useOxMySQLLib : {
+		title : "Use OxMySQL Lib?",
+		placeholder : "yes or no",
+		nextInput : "",
+		value : "yes",
+		input : null
+	}
 }
 
 var startInput = "resourceName"
@@ -160,6 +166,11 @@ function getGeneratedFolder(url) {
 			if (InputData.useLua54.value.toLowerCase() === "yes") {
 				if (file.name === 'fxmanifest.lua') {
 					folder.files[file.name] = folder.files[file.name].replace("fx_version 'cerulean'", "fx_version 'cerulean'\nlua54 'yes'")
+				}
+			}
+			if (InputData.useOxMySQLLib.value.toLowerCase() === "yes") {
+				if (file.name === 'fxmanifest.lua') {
+					folder.files[file.name] = folder.files[file.name].replace("server_scripts {", "server_scripts {\n\t'@oxmysql/lib/MySQL.lua',")
 				}
 			}
 		}
